@@ -1,0 +1,44 @@
+/* Design tokens — colors pulled from the live math-ninja.org (Divi) site:
+   each page hero gets its own accent hue, buttons and headings use Fredoka
+   One, body copy uses Open Sans. */
+:root {
+  --color-text: #273238;
+  --color-muted: #6b7680;
+  --color-bg: #ffffff;
+  --color-surface: #f7f9fa;
+  --color-line: #e7ebed;
+  --color-white: #ffffff;
+
+  /* page accent colors */
+  --color-teal: #1d9cad; /* home hero */
+  --color-purple: #9459ef; /* about hero */
+  --color-pink: #ef55ad; /* get involved hero */
+  --color-seafoam: #3dc5c2; /* contact hero */
+  --color-blue: #38a6ea; /* blog hero */
+
+  --color-orange: #ffc259; /* primary button */
+  --color-orange-strong: #ffaa33;
+  --color-coral: #ff5675;
+
+  --gradient-warm: linear-gradient(75deg, #ffbf86 0%, #ff5675 100%);
+  --gradient-cool: linear-gradient(135deg, #08aeea 0%, #2ad6bf 100%);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-pill: 999px;
+
+  --font-display: 'Fredoka One', 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --container-width: 1200px;
+}

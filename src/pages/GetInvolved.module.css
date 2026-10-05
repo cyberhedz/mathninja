@@ -1,0 +1,185 @@
+.categories {
+  padding-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.categoryRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--space-4);
+  row-gap: var(--space-2);
+  align-items: center;
+}
+
+.categoryIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 18px;
+}
+
+.categoryLabel {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.categoryCopy {
+  grid-column: 2;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.programs {
+  padding-top: var(--space-9);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-6);
+}
+
+.programName {
+  font-size: 20px;
+  margin-bottom: var(--space-3);
+}
+
+.programButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.detailBtn,
+.scheduleBtn {
+  height: 40px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-line);
+}
+
+.detailBtn {
+  background: var(--color-orange);
+  color: var(--color-white);
+  border-color: transparent;
+}
+
+.scheduleBtn {
+  background: var(--color-white);
+}
+
+.programDescription {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.programBullets {
+  margin: var(--space-3) 0 0;
+  padding-left: var(--space-5);
+  color: var(--color-muted);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.faqSection {
+  padding-top: var(--space-9);
+}
+
+.faqHeading {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: var(--space-6);
+}
+
+.faqColumns {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.testimonials {
+  margin: var(--space-9) 0;
+  padding: var(--space-8) var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--gradient-cool);
+  text-align: center;
+}
+
+.testimonialsHeading {
+  color: var(--color-white);
+  font-size: 28px;
+  margin-bottom: var(--space-6);
+}
+
+.testimonialGrid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.testimonial {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 14px;
+}
+
+.testimonial footer {
+  margin-top: var(--space-2);
+  font-weight: 700;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+@media (min-width: 640px) {
+  .categoryRow {
+    grid-template-columns: auto auto 1fr;
+  }
+
+  .categoryCopy {
+    grid-column: 3;
+  }
+
+  .program {
+    flex-direction: row;
+    gap: var(--space-7);
+  }
+
+  .programInfo {
+    flex: 0 0 260px;
+  }
+
+  .programInfo + div {
+    flex: 1;
+  }
+}
+
+@media (min-width: 760px) {
+  .faqColumns {
+    flex-direction: row;
+    gap: var(--space-7);
+  }
+
+  .faqColumns > * {
+    flex: 1;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

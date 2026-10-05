@@ -1,0 +1,14 @@
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: block;
+}
+
+@media (min-width: 760px) {
+  .wave {
+    height: 90px;
+  }
+}

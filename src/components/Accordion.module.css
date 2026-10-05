@@ -1,0 +1,35 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-coral);
+}
+
+.trigger svg {
+  flex-shrink: 0;
+  color: var(--color-muted);
+}
+
+.answer {
+  padding: 0 0 var(--space-4);
+  color: var(--color-muted);
+  font-size: 14px;
+  max-width: 60ch;
+}
