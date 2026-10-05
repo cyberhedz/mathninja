@@ -15,18 +15,21 @@ export function GetInvolved() {
       />
 
       <div className={`container ${styles.categories}`}>
-        {programCategories.map((cat, i) => (
+        {programCategories.map((cat) => {
+          const isMath = cat.label === 'Math/Science';
+          return (
           <div key={cat.label} className={styles.categoryRow}>
             <div
               className={styles.categoryIcon}
-              style={{ background: i === 0 ? 'var(--color-purple)' : 'var(--color-pink)' }}
+              style={{ background: isMath ? 'var(--color-pink)' : 'var(--color-purple)' }}
             >
-              {i === 0 ? <PencilIcon /> : <AtomIcon />}
+              {isMath ? <AtomIcon /> : <PencilIcon />}
             </div>
             <span className={styles.categoryLabel}>{cat.label}</span>
             <p className={styles.categoryCopy}>{cat.copy}</p>
           </div>
-        ))}
+          );
+        })}
       </div>
 
       <div className={`container ${styles.programs}`}>
@@ -66,14 +69,20 @@ export function GetInvolved() {
       <div className="container">
         <div className={styles.testimonials}>
           <h2 className={styles.testimonialsHeading}>What Our Families are Saying</h2>
-          <div className={styles.testimonialGrid}>
-            {testimonials.map((t, i) => (
-              <blockquote key={i} className={styles.testimonial}>
-                <p>"{t.quote}"</p>
-                <footer>— {t.author}</footer>
-              </blockquote>
-            ))}
-          </div>
+          {testimonials.length === 0 ? (
+            <p className={styles.testimonialsEmpty}>
+              We're collecting stories from Math Ninja families — check back soon.
+            </p>
+          ) : (
+            <div className={styles.testimonialGrid}>
+              {testimonials.map((t, i) => (
+                <blockquote key={i} className={styles.testimonial}>
+                  <p>"{t.quote}"</p>
+                  <footer>— {t.author}</footer>
+                </blockquote>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

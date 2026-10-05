@@ -128,6 +128,11 @@
   margin-bottom: var(--space-6);
 }
 
+.testimonialsEmpty {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+}
+
 .testimonialGrid {
   display: grid;
   gap: var(--space-5);
