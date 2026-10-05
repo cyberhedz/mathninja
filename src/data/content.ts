@@ -68,14 +68,68 @@ const SOROBAN_BENEFITS = [
   'Builds a real sense of achievement as proficiency improves.',
 ];
 
-export const programCategories = [
+// The real list of program lines from Reiko Yamamoto's site-map wireframes
+// ("Nin-Jutu One/Two/Three," "Memory Loss Preventions," "Social Clubs and
+// Meetup Group") — replacing the generic Reading/Writing & Math/Science
+// categories. The wireframes themselves only had Lorem Ipsum body copy, so
+// the descriptions below are new, written to be honest and modest (no
+// specific claims the source material doesn't back up) rather than lifted
+// from anywhere.
+export interface ProgramCategory {
+  label: string;
+  icon: 'cap' | 'bulb' | 'laptop' | 'pencil' | 'trophy' | 'sun' | 'users' | 'atom';
+  color: string;
+  copy: string;
+}
+
+export const programCategories: ProgramCategory[] = [
   {
-    label: 'Math/Science',
-    copy: "Our core curriculum is built around the Soroban, the Japanese abacus used for centuries to teach calculation. Children learn addition and subtraction — and later multiplication and division — by moving beads, then by picturing those same beads in their heads. That's how real mental math gets built.",
+    label: 'K-9 Afterschool Program',
+    icon: 'cap',
+    color: 'var(--color-purple)',
+    copy: 'Our core youth program. Kids from kindergarten through 9th grade build mental math skill with the Soroban in a structured afterschool setting.',
   },
   {
-    label: 'Reading/Writing',
-    copy: "Math Ninja's curriculum centers on math, not reading instruction. What we've found is that the two aren't unrelated: a child who gains real confidence in calculation tends to carry that confidence into other subjects, reading and writing included.",
+    label: 'Memory Loss Prevention',
+    icon: 'bulb',
+    color: 'var(--color-seafoam)',
+    copy: "Soroban practice isn't just for kids. Our adult program applies the same bead-visualization method with the aim of keeping the mind active.",
+  },
+  {
+    label: 'Online Programs',
+    icon: 'laptop',
+    color: 'var(--color-blue)',
+    copy: 'The same Soroban curriculum delivered remotely, for families and adult learners who want the flexibility of learning from home.',
+  },
+  {
+    label: 'Tutoring',
+    icon: 'pencil',
+    color: 'var(--color-pink)',
+    copy: 'One-on-one Soroban instruction for students who want individual pacing and attention beyond a group class.',
+  },
+  {
+    label: 'Summer Camps',
+    icon: 'sun',
+    color: 'var(--color-orange-strong)',
+    copy: 'A dedicated summer session for kids to keep building Soroban skills outside the regular school year.',
+  },
+  {
+    label: 'Math Ninja Clubs',
+    icon: 'atom',
+    color: 'var(--color-purple)',
+    copy: "Ongoing clubs for kids who've completed our core program and want to keep practicing and advancing their Soroban skill.",
+  },
+  {
+    label: 'Math Ninja Competitions',
+    icon: 'trophy',
+    color: 'var(--color-pink)',
+    copy: 'Friendly Soroban calculation competitions where kids can put their mental math skills to the test.',
+  },
+  {
+    label: 'Social Clubs & Meetup Group',
+    icon: 'users',
+    color: 'var(--color-blue)',
+    copy: 'Community meetups connecting Math Ninja families and alumni to stay in touch and keep learning together.',
   },
 ];
 

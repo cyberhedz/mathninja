@@ -144,3 +144,95 @@ export function MailIcon({ size = 16 }: IconProps) {
     </svg>
   );
 }
+
+export function GraduationCapIcon({ size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M10 4 18 8l-8 4-8-4 8-4Z"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.5 9.5v3.2c0 1.1 2 2 4.5 2s4.5-.9 4.5-2V9.5"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinejoin="round"
+      />
+      <path d="M17.3 8.3v4.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function LightbulbIcon({ size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M10 3a5 5 0 0 0-3 9c.6.5 1 1.1 1 1.8v.2h4v-.2c0-.7.4-1.3 1-1.8a5 5 0 0 0-3-9Z"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinejoin="round"
+      />
+      <path d="M8.5 16.5h3M9 18h2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function LaptopIcon({ size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <rect x="4" y="4.5" width="12" height="8" rx="1" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M2.5 15.5h15l-1.3-2.5h-12.4L2.5 15.5Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function TrophyIcon({ size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M6 4h8v4.5a4 4 0 0 1-8 0V4Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path d="M6 5H4a2 2 0 0 0 2 3.5M14 5h2a2 2 0 0 1-2 3.5" stroke="currentColor" strokeWidth="1.4" />
+      <path d="M10 12.5V15M7.5 16.5h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function SunIcon({ size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="10" cy="10" r="3.6" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M10 2.5v2M10 15.5v2M17.5 10h-2M4.5 10h-2M15.3 4.7l-1.4 1.4M6.1 13.9l-1.4 1.4M15.3 15.3l-1.4-1.4M6.1 6.1 4.7 4.7"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function UsersIcon({ size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="7" cy="7" r="2.3" stroke="currentColor" strokeWidth="1.4" />
+      <circle cx="14" cy="8" r="1.8" stroke="currentColor" strokeWidth="1.4" />
+      <path
+        d="M2.5 16c.6-2.8 2.4-4.3 4.5-4.3s3.9 1.5 4.5 4.3M12.3 11.8c1.8 0 3.2 1.3 3.7 3.7"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}

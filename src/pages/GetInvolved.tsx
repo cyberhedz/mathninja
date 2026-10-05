@@ -1,9 +1,31 @@
+import type { ComponentType } from 'react';
 import { PageHero } from '../components/PageHero';
 import { Accordion } from '../components/Accordion';
 import { ScheduleCallButton } from '../components/ScheduleCallButton';
-import { AtomIcon, PencilIcon } from '../components/icons';
+import {
+  AtomIcon,
+  GraduationCapIcon,
+  LightbulbIcon,
+  LaptopIcon,
+  PencilIcon,
+  SunIcon,
+  TrophyIcon,
+  UsersIcon,
+} from '../components/icons';
 import { programCategories, programs, getInvolvedFaq, testimonials } from '../data/content';
+import type { ProgramCategory } from '../data/content';
 import styles from './GetInvolved.module.css';
+
+const CATEGORY_ICONS: Record<ProgramCategory['icon'], ComponentType<{ size?: number }>> = {
+  cap: GraduationCapIcon,
+  bulb: LightbulbIcon,
+  laptop: LaptopIcon,
+  pencil: PencilIcon,
+  trophy: TrophyIcon,
+  sun: SunIcon,
+  users: UsersIcon,
+  atom: AtomIcon,
+};
 
 export function GetInvolved() {
   return (
@@ -15,21 +37,21 @@ export function GetInvolved() {
       />
 
       <div className={`container ${styles.categories}`}>
-        {programCategories.map((cat) => {
-          const isMath = cat.label === 'Math/Science';
-          return (
-          <div key={cat.label} className={styles.categoryRow}>
-            <div
-              className={styles.categoryIcon}
-              style={{ background: isMath ? 'var(--color-pink)' : 'var(--color-purple)' }}
-            >
-              {isMath ? <AtomIcon /> : <PencilIcon />}
-            </div>
-            <span className={styles.categoryLabel}>{cat.label}</span>
-            <p className={styles.categoryCopy}>{cat.copy}</p>
-          </div>
-          );
-        })}
+        <h2 className={styles.categoriesHeading}>What we offer</h2>
+        <div className={styles.categoryGrid}>
+          {programCategories.map((cat) => {
+            const Icon = CATEGORY_ICONS[cat.icon];
+            return (
+              <div key={cat.label} className={styles.categoryCard}>
+                <div className={styles.categoryIcon} style={{ background: cat.color }}>
+                  <Icon />
+                </div>
+                <span className={styles.categoryLabel}>{cat.label}</span>
+                <p className={styles.categoryCopy}>{cat.copy}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <div className={`container ${styles.programs}`}>
